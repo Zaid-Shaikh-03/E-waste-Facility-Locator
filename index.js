@@ -17,7 +17,6 @@ const url =
   "&client_secret=" +
   client_secret;
 
-// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 

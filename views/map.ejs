@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-waste Facility Locator</title>
+    <link rel="icon" href="asset/logo.ico" style="width: 16px" />
+  </head>
+  <style>
+    html,
+    body,
+    #map {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+  <script
+    src="https://apis.mappls.com/advancedmaps/api/<%= token%>/map_sdk?layer=vector&v=3.0&callback=initMap1"
+    defer
+    async
+  ></script>
+  <!-- b64aaa82-7ce4-4601-b138-6643a6028866 -->
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      var marker;
+      function initMap1() {
+        map = new mappls.Map("map", { center: [19.000224, 73.104088] }); //19.000224,73.104088
+        Marker1 = new mappls.Marker({
+          map: map,
+          position: {
+            lat: 19.000224,
+            lng: 73.104088,
+          },
+          fitbounds: true,
+          icon_url: "https://apis.mapmyindia.com/map_v3/1.png",
+        });
+      }
+    </script>
+  </body>
+</html>

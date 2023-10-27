@@ -1,0 +1,24 @@
+<div class="model" id="model">
+    <div class='model__container'>
+        <img class="model__img" src="asset/E-waste-Disposal.png">
+        <div class="model__content">
+            <h1 class="model__title">SPONSOR MY EDUCATION <span>START-UP CONTEST</span>
+                <h1>
+                    <p class="model__paragraph">This contest is geared towards discovering and funding innovative ideas.</p>
+                    <button class="model__button">Click here to Read</button>
+        </div>
+        <i id="close" class="fas fa-times"></i>
+    </div>
+</div>
+<script>
+    const closeBtn = document.getElementById('close');
+const modelMenu = document.getElementById('model');
+const modelBtn = document.querySelector('.model__button');
+
+setTimeout(() => {
+    modelMenu.classList.add('show');
+}, 8000);
+
+closeBtn.addEventListener('click', () => { modelMenu.classList.remove('show') })
+modelBtn.addEventListener('click', () => { modelMenu.classList.remove('show') })
+</script>

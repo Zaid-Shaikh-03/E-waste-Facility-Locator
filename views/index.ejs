@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+<!-- Hero -->
+<section class="hero">
+  <div class="main-sec">
+    <!-- Banner -->
+    <div class="banner-wthree-info container">
+      <div class="row">
+        <div class="col-lg-5 banner-left-info">
+          <h3>
+            Locate E-Waste Drop-off Points:<span
+              >Navigating a Greener Future</span
+            >
+            for Your Electronics,
+            <span>Safeguarding Our Earth.</span>
+          </h3>
+          <a href="map" class="section-button btn shop">E-Waste Facility</a>
+          <a href="map" class="section-button btn shop ml-3">Start Recycling</a>
+        </div>
+
+        <div class="col-lg-7 banner-img">
+          <a href="/map">
+            <img src="asset/Map2.png" alt="part image" class="img-fluid" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include("partials/about.ejs")%> <%- include("partials/modelBox.ejs")%><%-
+include("partials/features.ejs")%> <%- include("partials/FAQs.ejs")%> <%-
+include("partials/testimonial.ejs")%> <%- include("partials/contect.ejs")%>
+<%-include("partials/footer.ejs")%>
+<script>
+  // FAQs
+  $("body").delegate(".c-faq", "click", function () {
+    $(".c-faq").removeClass("c-faq--active");
+    $(this).addClass("c-faq--active");
+  });
+  // testimonial
+  $(document).ready(function () {
+    $(".testimonial .indicators li").click(function () {
+      var i = $(this).index();
+      var targetElement = $(".testimonial .tabs li");
+      targetElement.eq(i).addClass("active");
+      targetElement.not(targetElement[i]).removeClass("active");
+    });
+    $(".testimonial .tabs li").click(function () {
+      var targetElement = $(".testimonial .tabs li");
+      targetElement.addClass("active");
+      targetElement.not($(this)).removeClass("active");
+    });
+  });
+  $(document).ready(function () {
+    $(".slider .swiper-pagination span").each(function (i) {
+      $(this)
+        .text(i + 1)
+        .prepend("0");
+    });
+  });
+</script>
